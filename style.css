@@ -1,0 +1,5 @@
+@media screen and (min-width: 100px) {
+  .nav.navbar-nav  li a {
+    visibility: visible;
+  }
+}
