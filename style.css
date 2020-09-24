@@ -2,22 +2,87 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/*********** Header ***********/
+/*********** Inizio Header ***********/
 
 /* Navbar */
 .navbar {
   background-color: #2c3e50;
   border-radius: 0;
-  border: none;
-  padding: 12px;
+  border-color: #2c3e50;
+  padding: 8px;
 }
 
-.navbar .navbar-brand {
-  text-transform: uppercase;
+.navbar-header .navbar-brand {
   color: #fff;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
 }
+
+.navbar-header .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-header button.navbar-toggle.collapsed {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #1abc9c;
+  border-radius: 8px;
+  border: none;
+  position:relative;
+  padding: 12px 14px;
+}
+
+button.navbar-toggle.collapsed > span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#icon-bar-container {
+  display: inline-block;
+  position:absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+}
+
+button.navbar-toggle.collapsed .icon-bar {
+  width: 12px;
+  margin: 2px 0;
+  background-color: #fff;
+}
+
+.navbar-header button.navbar-toggle.collapsed:hover {
+  filter: brightness(0.7);
+}
+
+.collapse.navbar-collapse ul.navbar-right li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.collapse.navbar-collapse ul.navbar-right li > a:hover {
+  color: #1abc9c;
+}
+
+/* Jumbotron */
+header #jumbotron {
+  background-color: #1abc9c;
+}
+
+
+
+/*********** Fine Header ***********/
+
+/*********** Inizio Main ***********/
+/*********** Fine Main ***********/
+
+/*********** Inizio Footer ***********/
+/*********** Fine Footer ***********/
 
 /* Responsive Navbar - Breakpoint 768px */
 @media screen and (min-width: 768px) {
@@ -50,11 +115,11 @@ body {
     display: block !important;
   }
 
-  /* .navbar {
+  .navbar {
     padding: 26px;
   }
 
   .navbar .navbar-brand {
-  font-size: 28px;
-  } */
+    font-size: 28px;
+  }
 }
