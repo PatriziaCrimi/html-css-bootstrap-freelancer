@@ -1,23 +1,28 @@
+/* Common rules */
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Common rules */
-.padding-sections {
-  padding-top: 100px;
-  padding-bottom: 80px;
+h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
 }
 
-.bg-green {
+.primary-green {
   background-color: #1abc9c;
   color: #fff;
   text-align: center;
 }
 
-.bg-white {
+.secondary-white {
   background-color: #fff;
-  color: #212529;
+  color: #2c3e50;
   text-align: center;
+}
+
+.divider {
+  padding: 10px 0 25px;
 }
 
 hr.half-rule {
@@ -104,6 +109,11 @@ button.navbar-toggle.collapsed .icon-bar {
 }
 
 /* Jumbotron */
+#jumbotron .container {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
 #jumbotron img {
   width: 245px;
 }
@@ -112,21 +122,38 @@ button.navbar-toggle.collapsed .icon-bar {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 44px;
-  padding: 15px;
+  padding: 15px 15px 0;
   line-height: 45px;
   margin-top: 30px;
 }
 
 #jumbotron p {
   font-size: 18px;
-  margin-top: 25px;
 }
 /*********** Fine Header ***********/
 
 /*********** Inizio Main ***********/
+
 /* First section: Portfolio */
-main section#portfolio hr.half-rule {
+main section#portfolio .container {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+section#portfolio hr.half-rule {
   border-top: 4px solid #212529;
+}
+
+section#portfolio img {
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+section#portfolio img:hover {
+  opacity: 0;
+  background-color: rgba(26, 188, 156, 0.9);
 }
 
 /* Second section: About */
@@ -157,10 +184,18 @@ main section#contacts {
   .navbar-collapse.collapse {
     display: none !important;
   }
+
+  main section#portfolio img {
+    max-width: 320px;
+  }
 }
 
 /* Responsive - Breakpoint 992px */
 @media screen and (min-width: 992px) {
+
+  h2 {
+    font-size: 50px;
+  }
 
   .navbar-header {
     float: left;
@@ -185,5 +220,20 @@ main section#contacts {
   #jumbotron h1 {
     font-size: 65px;
     margin-top: 40px;
+  }
+
+  #jumbotron p {
+    font-size: 22px;
+  }
+
+  main section#portfolio img {
+    max-width: 280px;
+  }
+}
+
+/* Responsive - Breakpoint 992px */
+@media screen and (min-width: 1200px) {
+  main section#portfolio img {
+    max-width: 340px;
   }
 }
