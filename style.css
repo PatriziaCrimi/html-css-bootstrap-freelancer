@@ -2,6 +2,39 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Common rules */
+.padding-sections {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.bg-green {
+  background-color: #1abc9c;
+  color: #fff;
+  text-align: center;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: #212529;
+  text-align: center;
+}
+
+hr.half-rule {
+  text-align: left;
+  width: 120px;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.glyphicon.glyphicon-star {
+  font-size: 40px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
 /*********** Inizio Header ***********/
 
 /* Navbar */
@@ -10,6 +43,7 @@ body {
   border-radius: 0;
   border-color: #2c3e50;
   padding: 8px;
+  margin-bottom: 0;
 }
 
 .navbar-header .navbar-brand {
@@ -70,21 +104,46 @@ button.navbar-toggle.collapsed .icon-bar {
 }
 
 /* Jumbotron */
-header #jumbotron {
-  background-color: #1abc9c;
+#jumbotron img {
+  width: 245px;
 }
 
+#jumbotron h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 44px;
+  padding: 15px;
+  line-height: 45px;
+  margin-top: 30px;
+}
 
-
+#jumbotron p {
+  font-size: 18px;
+  margin-top: 25px;
+}
 /*********** Fine Header ***********/
 
 /*********** Inizio Main ***********/
+/* First section: Portfolio */
+main section#portfolio hr.half-rule {
+  border-top: 4px solid #212529;
+}
+
+/* Second section: About */
+main section#about {
+
+}
+/* Third section: Contacts */
+main section#contacts {
+
+}
 /*********** Fine Main ***********/
+
 
 /*********** Inizio Footer ***********/
 /*********** Fine Footer ***********/
 
-/* Responsive Navbar - Breakpoint 768px */
+/* Responsive - Breakpoint 768px */
 @media screen and (min-width: 768px) {
 
   .navbar-header {
@@ -100,7 +159,7 @@ header #jumbotron {
   }
 }
 
-/* Responsive Navbar - Breakpoint 992px */
+/* Responsive - Breakpoint 992px */
 @media screen and (min-width: 992px) {
 
   .navbar-header {
@@ -121,5 +180,10 @@ header #jumbotron {
 
   .navbar .navbar-brand {
     font-size: 28px;
+  }
+
+  #jumbotron h1 {
+    font-size: 65px;
+    margin-top: 40px;
   }
 }
