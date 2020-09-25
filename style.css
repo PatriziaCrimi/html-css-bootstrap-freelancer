@@ -3,14 +3,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 36px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .primary-green {
@@ -47,7 +48,7 @@ hr.half-rule {
 /*********** Inizio Header ***********/
 
 /* Navbar */
-.navbar {
+.navbar.navbar-default.navbar-fixed-top {
   background-color: #2c3e50;
   border-radius: 0;
   border-color: #2c3e50;
@@ -80,7 +81,7 @@ hr.half-rule {
 
 button.navbar-toggle.collapsed > span {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 #icon-bar-container {
@@ -98,7 +99,7 @@ button.navbar-toggle.collapsed .icon-bar {
 }
 
 .navbar-header button.navbar-toggle.collapsed:hover {
-  filter: brightness(0.7);
+  background-color: #148f77;
 }
 
 .collapse.navbar-collapse ul.navbar-right li > a {
@@ -108,13 +109,14 @@ button.navbar-toggle.collapsed .icon-bar {
   font-size: 16px;
 }
 
+.collapse.navbar-collapse ul.navbar-right li > a:focus,
 .collapse.navbar-collapse ul.navbar-right li > a:hover {
   color: #1abc9c;
 }
 
 /* Jumbotron */
 #jumbotron .container {
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 80px;
 }
 
@@ -135,7 +137,7 @@ button.navbar-toggle.collapsed .icon-bar {
 /*********** Inizio Main ***********/
 main .container {
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 95px;
 }
 
 /* First section: Portfolio */
@@ -147,37 +149,65 @@ section#portfolio img {
   max-width: 400px;
   border-radius: 10px;
   margin-bottom: 50px;
-  transition: opacity 0.5s ease-in-out;
+  /* transition: opacity 0.5s ease-in-out; */
 }
 
-section#portfolio img:hover {
+section#portfolio img.no-margin-bottom-xs {
+  margin-bottom: 0px;
+}
+
+/* section#portfolio img:hover {
   opacity: 0;
   background-color: rgba(26, 188, 156, 0.9);
-}
+} */
 
 /* Second section: About */
 main section#about p {
- text-align: left;
- line-height: 30px;
- padding: 0 20px 20px;
+  text-align: left;
+  line-height: 30px;
+  padding: 7px;
 }
 
 section#about button.btn.btn-default {
   background-color: #1abc9c;
-  border: 1px solid #fff;
-  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 18px 28px;
   color: #fff;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 25px;
+}
+
+section#about button.btn.btn-default:hover {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+button.btn.btn-default .glyphicon.glyphicon-download-alt {
+  margin-right: 5px;
 }
 
 /* Third section: Contacts */
-main section#contacts {
-
+section#contacts hr.half-rule {
+  border-top: 4px solid #212529;
 }
+
 /*********** Fine Main ***********/
 
 
 /*********** Inizio Footer ***********/
 /*********** Fine Footer ***********/
+
+/* Responsive (imitating Bootstrap 4) - Breakpoint 579px */
+@media screen and (min-width: 579px) and (max-width: 766px) {
+  section#about .container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 
 /* Responsive - Breakpoint 768px */
 @media screen and (min-width: 768px) {
@@ -196,6 +226,14 @@ main section#contacts {
 
   main section#portfolio img {
     max-width: 320px;
+  }
+
+  main section#about p {
+    padding: 0 20px 0px;
+   }
+
+  section#portfolio img.no-margin-bottom-sm {
+    margin-bottom: 0px;
   }
 }
 
@@ -218,7 +256,7 @@ main section#contacts {
     display: block !important;
   }
 
-  .navbar {
+  .navbar.navbar-default.navbar-fixed-top {
     padding: 26px;
   }
 
@@ -238,9 +276,17 @@ main section#contacts {
   main section#portfolio img {
     max-width: 280px;
   }
+
+  main section#about p {
+    padding: 0 15px 0px;
+  }
+
+  section#portfolio img.no-margin-bottom-md {
+    margin-bottom: 0px;
+  }
 }
 
-/* Responsive - Breakpoint 992px */
+/* Responsive - Breakpoint 1200px */
 @media screen and (min-width: 1200px) {
   main section#portfolio img {
     max-width: 340px;
