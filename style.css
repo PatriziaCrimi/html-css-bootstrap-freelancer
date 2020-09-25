@@ -9,6 +9,10 @@ h2 {
   font-size: 36px;
 }
 
+p {
+  font-size: 18px;
+}
+
 .primary-green {
   background-color: #1abc9c;
   color: #fff;
@@ -126,20 +130,15 @@ button.navbar-toggle.collapsed .icon-bar {
   line-height: 45px;
   margin-top: 30px;
 }
-
-#jumbotron p {
-  font-size: 18px;
-}
 /*********** Fine Header ***********/
 
 /*********** Inizio Main ***********/
-
-/* First section: Portfolio */
-main section#portfolio .container {
+main .container {
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
+/* First section: Portfolio */
 section#portfolio hr.half-rule {
   border-top: 4px solid #212529;
 }
@@ -157,9 +156,19 @@ section#portfolio img:hover {
 }
 
 /* Second section: About */
-main section#about {
-
+main section#about p {
+ text-align: left;
+ line-height: 30px;
+ padding: 0 20px 20px;
 }
+
+section#about button.btn.btn-default {
+  background-color: #1abc9c;
+  border: 1px solid #fff;
+  padding: 20px;
+  color: #fff;
+}
+
 /* Third section: Contacts */
 main section#contacts {
 
