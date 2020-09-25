@@ -154,16 +154,37 @@ section#portfolio img {
   max-width: 400px;
   border-radius: 10px;
   margin-bottom: 50px;
-  /* transition: opacity 0.5s ease-in-out; */
 }
 
 section#portfolio img.no-margin-bottom-xs {
   margin-bottom: 0px;
 }
 
-/* section#portfolio img:hover {
-  opacity: 0;
+#portfolio .green-cover {
+  background-color: rgba(26, 188, 156, 0);
+  border-radius: 10px;
+  font-size: 70px;
+  color: #fff;
+  position:relative;
+}
+
+#portfolio .green-cover span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* visibility: hidden; */
+}
+
+#portfolio .green-cover:hover {
   background-color: rgba(26, 188, 156, 0.9);
+  opacity: 2.5;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* z-index: 2; */
+}
+
+/* #portfolio .green-cover:hover ~ span {
+  visibility: visible;
 } */
 
 /* Second section: About */
