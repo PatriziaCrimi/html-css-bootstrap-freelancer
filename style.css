@@ -1,9 +1,11 @@
 /* Common rules */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 36px;
@@ -11,12 +13,14 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 20px;
-  font-family: 'Lato', sans-serif;
+}
+
+.hidden {
+  display: none;
 }
 
 .primary-green {
   background-color: #1abc9c;
-  color: #fff;
   text-align: center;
 }
 
@@ -60,6 +64,7 @@ hr.half-rule {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 }
 
@@ -68,9 +73,9 @@ hr.half-rule {
 }
 
 .navbar-header button.navbar-toggle.collapsed {
-  color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   background-color: #1abc9c;
   border-radius: 8px;
@@ -175,12 +180,11 @@ section#about button.btn.btn-default {
   padding: 18px 28px;
   color: #fff;
   font-size: 20px;
-  font-family: 'Lato', sans-serif;
   margin-top: 25px;
 }
 
 section#about button.btn.btn-default:hover {
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
@@ -205,15 +209,14 @@ section#contacts .form-group {
   margin: 0;
 }
 
-section#contacts .form-group label {
+/* section#contacts .form-group label {
   display: none;
-}
+} */
 
 section#contacts .form-group input.input-lg,
 section#contacts .form-group textarea.input-lg {
   width: 100%;
   border: none;
-  font-family: 'Lato', sans-serif;
   font-size: 24px;
   padding: 50px 0;
 }
@@ -228,7 +231,6 @@ section#contacts .form-group textarea.input-lg:focus {
 }
 
 section#contacts form button.btn.btn-default {
-  font-family: 'Lato', sans-serif;
   font-size: 20px;
   background-color: #1abc9c;
   border-color: #1abc9c;
@@ -240,26 +242,81 @@ section#contacts form button.btn.btn-default {
 
 section#contacts form button.btn.btn-default:hover {
   background-color: #148f77;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 /*********** Fine Main ***********/
 
 /*********** Inizio Footer ***********/
 footer {
-  background-color:  #2c3e50;
-  color: #fff;
+  text-align: center;
 }
 
+footer #footer-top {
+  background-color:  #2c3e50;
+  padding: 70px 0;
+}
 
+#footer-top h4 {
+  font-size: 24px;
+}
 
+#footer-top address {
+  font-size: 20px;
+  margin: 40px 0;
+}
+
+#footer-top .social {
+  display: inline-block;
+  margin: 15px 0 40px 0;
+}
+
+.social a.btn {
+  color: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.social a.btn:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.2s ease-in-out; color 0.2s ease-in-out;
+}
+
+#footer-top p {
+  line-height: 30px;
+  margin-top: 25px;
+}
+
+#footer-top p > span > a {
+  color: #1abc9c;
+}
+
+#footer-top p > span > a:hover {
+  color: #117964;
+}
+
+footer #footer-bottom {
+  background-color: #1a252f;
+  font-size: 15px;
+  padding: 25px 0;
+}
 /*********** Fine Footer ***********/
 
 /* Responsive (imitating Bootstrap 4) - Breakpoint 579px */
 @media screen and (min-width: 579px) and (max-width: 766px) {
   section#about .container,
-  section#contacts .container {
+  section#contacts .container, {
     padding-left: 14%;
     padding-right: 14%;
+  }
+
+  #footer-top p {
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 
@@ -348,5 +405,10 @@ footer {
 @media screen and (min-width: 1200px) {
   main section#portfolio img {
     max-width: 340px;
+  }
+
+  #footer-top p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
