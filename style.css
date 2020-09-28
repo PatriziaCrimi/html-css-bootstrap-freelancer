@@ -153,39 +153,52 @@ section#portfolio hr.half-rule {
 section#portfolio img {
   max-width: 400px;
   border-radius: 10px;
+}
+
+#portfolio a {
+  display: block;
+  max-width: 400px;
+  background-color: yellow;
+  position: relative;
   margin-bottom: 50px;
 }
 
-section#portfolio img.no-margin-bottom-xs {
+section#portfolio a.no-margin-bottom-xs {
   margin-bottom: 0px;
 }
 
-#portfolio .green-cover {
-  background-color: rgba(26, 188, 156, 0);
+section#portfolio .green-cover {
+  background-color: rgba(26, 188, 156, 0.0);
   border-radius: 10px;
-  font-size: 70px;
-  color: #fff;
-  position:relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
-#portfolio .green-cover span i {
+.green-cover > span {
+  visibility: hidden;
+}
+
+#portfolio .green-cover > span > i {
+  font-size: 70px;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* visibility: hidden; */
 }
 
 #portfolio .green-cover:hover {
   background-color: rgba(26, 188, 156, 0.9);
-  opacity: 2.5;
-  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  /* z-index: 2; */
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-/* #portfolio .green-cover:hover ~ span {
+.green-cover:hover span {
   visibility: visible;
-} */
+  transition: visibility 0.2s;
+  transition-delay: 0.1s;
+}
 
 /* Second section: About */
 main section#about p {
@@ -229,10 +242,6 @@ section#contacts .form-group {
   border-bottom: 1px solid #e9ecef;
   margin: 0;
 }
-
-/* section#contacts .form-group label {
-  display: none;
-} */
 
 section#contacts .form-group input.input-lg,
 section#contacts .form-group textarea.input-lg {
@@ -299,12 +308,20 @@ footer #footer-top {
   height: 50px;
   font-size: 20px;
   margin-right: 10px;
+  position: relative;
+}
+
+.social a > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .social a.btn:hover {
   background-color: #f8f9fa;
   color: #212529;
-  transition: background-color 0.2s ease-in-out; color 0.2s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 #footer-top p {
@@ -356,7 +373,8 @@ footer #footer-bottom {
     display: none !important;
   }
 
-  main section#portfolio img {
+  main section#portfolio img,
+  section#portfolio a {
     max-width: 320px;
   }
 
@@ -364,7 +382,7 @@ footer #footer-bottom {
     padding: 0 20px 0px;
    }
 
-  section#portfolio img.no-margin-bottom-sm {
+  section#portfolio a.no-margin-bottom-sm {
     margin-bottom: 0px;
   }
 
@@ -409,7 +427,8 @@ footer #footer-bottom {
     font-size: 22px;
   }
 
-  main section#portfolio img {
+  main section#portfolio img,
+  section#portfolio a {
     max-width: 280px;
   }
 
@@ -417,14 +436,16 @@ footer #footer-bottom {
     padding: 0 15px;
   }
 
-  section#portfolio img.no-margin-bottom-md {
+  section#portfolio a.no-margin-bottom-md {
     margin-bottom: 0px;
   }
 }
 
 /* Responsive - Breakpoint 1200px */
 @media screen and (min-width: 1200px) {
-  main section#portfolio img {
+
+  main section#portfolio img,
+  section#portfolio a {
     max-width: 340px;
   }
 
